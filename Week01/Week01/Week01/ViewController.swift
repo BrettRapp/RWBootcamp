@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var redValue = 0
+    var redValue: Int = 0
     var greenValue = 0
     var blueValue = 0
 
@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        
     }
 
     @IBAction func setColor(_ sender: Any) {
@@ -37,20 +39,39 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func redSliderMoved(_ sender: Any) {
-        
+    @IBAction func redSliderMoved(_ sender: UISlider) {
+        var redValue = redSlider.value.rounded()
+        redLabel.text =  "\(Int(redValue))"
+        print(Int(redSlider.value))
+
     }
     
     @IBAction func greenSliderMoved(_ sender: Any) {
-        
+       var greenValue = greenSlider.value.rounded()
+        greenLabel.text =  "\(Int(greenValue))"
+        print(Int(greenSlider.value))
     }
     
     @IBAction func blueSliderMoved(_ sender: Any) {
-        
+        var blueValue = blueSlider.value.rounded()
+        blueLabel.text =  "\(Int(blueValue))"
+        print(Int(blueSlider.value))
     }
     
 
     @IBAction func resetButton(_ sender: Any) {
+        redValue = 0
+        greenValue = 0
+        blueValue = 0
+        
+        redSlider.value = 0
+        greenSlider.value = 0
+        blueSlider.value = 0
+        
+        redLabel.text = "0"
+        greenLabel.text = "0"
+        blueLabel.text = "0"
+        
         
     }
     
