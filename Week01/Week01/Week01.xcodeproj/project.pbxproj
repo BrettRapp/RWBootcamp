@@ -14,6 +14,7 @@
 		8A9651462481ED33002B9985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A9651452481ED33002B9985 /* Assets.xcassets */; };
 		8A9651492481ED33002B9985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A9651472481ED33002B9985 /* LaunchScreen.storyboard */; };
 		8A96515124823933002B9985 /* WikipediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A96515024823933002B9985 /* WikipediaViewController.swift */; };
+		8A965154248241BA002B9985 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A965153248241BA002B9985 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8A9651482481ED33002B9985 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A96514A2481ED33002B9985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A96515024823933002B9985 /* WikipediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaViewController.swift; sourceTree = "<group>"; };
+		8A965153248241BA002B9985 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A965154248241BA002B9985 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +47,7 @@
 			children = (
 				8A96513B2481ED33002B9985 /* Week01 */,
 				8A96513A2481ED33002B9985 /* Products */,
+				8A965152248241BA002B9985 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +72,14 @@
 				8A96514A2481ED33002B9985 /* Info.plist */,
 			);
 			path = Week01;
+			sourceTree = "<group>";
+		};
+		8A965152248241BA002B9985 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A965153248241BA002B9985 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

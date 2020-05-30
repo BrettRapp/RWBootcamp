@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import WebKit
 
 class WikipediaViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let url = URL(string: "https://en.wikipedia.org/wiki/RGB_color_model") {
+            UIApplication.shared.open(url, options: [:])
+        }
 
         // Do any additional setup after loading the view.
     }
