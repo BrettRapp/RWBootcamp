@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var redValue: Int = 0
+    var redValue = 0
     var greenValue = 0
     var blueValue = 0
 
@@ -25,8 +25,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        
+
     }
 
     @IBAction func setColor(_ sender: Any) {
@@ -38,41 +37,31 @@ class ViewController: UIViewController {
         
     }
     
-    
-    @IBAction func redSliderMoved(_ sender: UISlider) {
-        var redValue = redSlider.value.rounded()
-        redLabel.text =  "\(Int(redValue))"
-        print(Int(redSlider.value))
+    @IBAction func sliderMoved(_ sender: Any) {
+        
+        self.view.backgroundColor = UIColor(red: CGFloat((redSlider.value/255)), green: CGFloat((greenSlider.value/255)), blue: CGFloat((blueSlider.value/255)), alpha: 1.0)
+        
+        redLabel.text = String(redSlider.value.rounded())
+        greenLabel.text = String(greenSlider.value.rounded())
+        blueLabel.text = String(blueSlider.value.rounded())
 
     }
     
-    @IBAction func greenSliderMoved(_ sender: Any) {
-       var greenValue = greenSlider.value.rounded()
-        greenLabel.text =  "\(Int(greenValue))"
-        print(Int(greenSlider.value))
-    }
-    
-    @IBAction func blueSliderMoved(_ sender: Any) {
-        var blueValue = blueSlider.value.rounded()
-        blueLabel.text =  "\(Int(blueValue))"
-        print(Int(blueSlider.value))
-    }
-    
-
     @IBAction func resetButton(_ sender: Any) {
         redValue = 0
         greenValue = 0
         blueValue = 0
+
+        redLabel.text = "0"
+        greenLabel.text = "0"
+        blueLabel.text = "0"
         
         redSlider.value = 0
         greenSlider.value = 0
         blueSlider.value = 0
         
-        redLabel.text = "0"
-        greenLabel.text = "0"
-        blueLabel.text = "0"
-        
-        
+        self.view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1.0)
+                
     }
     
 }
