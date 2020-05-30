@@ -30,6 +30,9 @@ class ViewController: UIViewController {
 
     @IBAction func setColor(_ sender: Any) {
         
+        self.view.backgroundColor = UIColor(red: CGFloat((redSlider.value/255)), green: CGFloat((greenSlider.value/255)), blue: CGFloat((blueSlider.value/255)), alpha: 1.0)
+               
+        
         let alert = UIAlertController(title: "String", message: "This is the message string", preferredStyle:   .alert)
         let action = UIAlertAction.init(title: "ok", style: .default, handler: nil)
         alert.addAction(action)
@@ -38,9 +41,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sliderMoved(_ sender: Any) {
-        
-        self.view.backgroundColor = UIColor(red: CGFloat((redSlider.value/255)), green: CGFloat((greenSlider.value/255)), blue: CGFloat((blueSlider.value/255)), alpha: 1.0)
-        
+
         redLabel.text = String(redSlider.value.rounded())
         greenLabel.text = String(greenSlider.value.rounded())
         blueLabel.text = String(blueSlider.value.rounded())
