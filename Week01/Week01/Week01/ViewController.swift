@@ -28,6 +28,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        colorNameLabel.text = "Move the sliders to make a color..."
 
     }
 
@@ -51,12 +53,8 @@ class ViewController: UIViewController {
         alert.addTextField()
         alert.textFields![0].placeholder = "Name your color"
         
-
-
-
         present(alert, animated: true, completion: nil)
         
-     
     }
     
     @IBAction func sliderMoved(_ sender: Any) {
@@ -80,9 +78,8 @@ class ViewController: UIViewController {
         greenSlider.value = 0
         blueSlider.value = 0
         
-        colorNameLabel.text = "Name your color..."
+        colorNameLabel.text = "Move the sliders to make a color..."
   
-        
         self.view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1.0)
                 
     }
