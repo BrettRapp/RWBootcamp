@@ -18,6 +18,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenLabel: UILabel!
     @IBOutlet weak var blueLabel: UILabel!
     
+    @IBOutlet weak var redSliderLabel: UILabel!
+    @IBOutlet weak var greenSliderLabel: UILabel!
+    @IBOutlet weak var blueSliderLabel: UILabel!
+    
     @IBOutlet weak var colorNameLabel: UILabel!
  
     @IBOutlet weak var redSlider: UISlider!
@@ -52,6 +56,18 @@ class ViewController: UIViewController {
         
         present(alert, animated: true, completion: nil)
         
+        if redSlider.value < 30 && greenSlider.value < 30 && blueSlider.value < 30 {
+            redLabel.textColor = UIColor.red
+            redSliderLabel.textColor = UIColor.red
+            greenLabel.textColor = UIColor.green
+            greenSliderLabel.textColor = UIColor.green
+            blueLabel.textColor = UIColor.blue
+            blueSliderLabel.textColor = UIColor.blue
+            colorNameLabel.textColor = UIColor.white
+        } else {
+            print("no")
+        }
+        
     }
     
     @IBAction func sliderMoved(_ sender: Any) {
@@ -76,6 +92,14 @@ class ViewController: UIViewController {
         blueSlider.value = 0
         
         colorNameLabel.text = "Move the sliders to make your color..."
+        
+        redLabel.textColor = UIColor.red
+        redSliderLabel.textColor = UIColor.black
+        greenLabel.textColor = UIColor.green
+        greenSliderLabel.textColor = UIColor.black
+        blueLabel.textColor = UIColor.blue
+        blueSliderLabel.textColor = UIColor.black
+        colorNameLabel.textColor = UIColor.black
   
         self.view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1.0)
                 
