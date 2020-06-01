@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var colorNameLabel: UILabel!
  
-    
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
@@ -29,7 +28,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        colorNameLabel.text = "Move the sliders to make a color..."
+        colorNameLabel.text = "Move the sliders to make your color..."
 
     }
 
@@ -38,13 +37,11 @@ class ViewController: UIViewController {
         
         self.view.backgroundColor = UIColor(red: CGFloat((redSlider.value/255)), green: CGFloat((greenSlider.value/255)), blue: CGFloat((blueSlider.value/255)), alpha: 1.0)
                
-        
         let alert = UIAlertController(title: "Nice Choice!", message: "Give your color a name", preferredStyle:   .alert)
 
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
 
             if let colorName = alert.textFields?.first?.text {
- //               print("Your color is: \(colorName)")
                 
                 self.colorNameLabel.text = "You called your color: \(colorName)"
             }
@@ -58,10 +55,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sliderMoved(_ sender: Any) {
-
-        redLabel.text = String(redSlider.value.rounded())
-        greenLabel.text = String(greenSlider.value.rounded())
-        blueLabel.text = String(blueSlider.value.rounded())
+        
+        redLabel.text = "\(Int(redSlider.value))"
+        greenLabel.text = "\(Int(greenSlider.value))"
+        blueLabel.text = "\(Int(blueSlider.value))"
 
     }
     
@@ -78,7 +75,7 @@ class ViewController: UIViewController {
         greenSlider.value = 0
         blueSlider.value = 0
         
-        colorNameLabel.text = "Move the sliders to make a color..."
+        colorNameLabel.text = "Move the sliders to make your color..."
   
         self.view.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1.0)
                 
