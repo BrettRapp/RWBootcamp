@@ -6,3 +6,4 @@ Goals/Hobbies/Interests: Goal: become competent and comfortable as a Junior Dev 
 Hobbies: Underwater Photography, being underwater and 3d Photogrammetry https://sketchfab.com/brettrapp
 Find me on Discord: Brett #7162
 ![](RWBootcamp/IMG_2103.pdf)
+<img src="RWBootcamp/IMG_2103.pdf">
