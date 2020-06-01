@@ -15,12 +15,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="tDB-i4-Dmp">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="tDB-i4-Dmp">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tDB-i4-Dmp" secondAttribute="trailing" id="4Sm-OY-Agy"/>
+                            <constraint firstItem="tDB-i4-Dmp" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="EKD-da-txA"/>
+                            <constraint firstItem="tDB-i4-Dmp" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Ij6-Qp-2Xb"/>
+                            <constraint firstAttribute="bottom" secondItem="tDB-i4-Dmp" secondAttribute="bottom" id="WYn-Fw-LL5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
